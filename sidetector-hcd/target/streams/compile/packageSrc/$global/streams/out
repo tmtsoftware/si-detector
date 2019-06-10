@@ -1,11 +1,1 @@
-[0m[[0m[0minfo[0m] [0m[0mPackaging /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/target/scala-2.12/sidetector-hcd_2.12-0.0.1-sources.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	org/tmt/aps/ics/sidetectorhcd/SidetectorHcdBehaviorFactory.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/scala/org/tmt/aps/ics/sidetectorhcd/SidetectorHcdBehaviorFactory.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	org/tmt/aps/ics/sidetectorhcd/SidetectorHcdHandlers.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/scala/org/tmt/aps/ics/sidetectorhcd/SidetectorHcdHandlers.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdBehaviorFactory.java[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/java/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdBehaviorFactory.java[0m
-[0m[[0m[0mdebug[0m] [0m[0m	org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.java[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/java/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.java[0m
-[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
+[debug] Jar uptodate: /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/target/scala-2.12/sidetector-hcd_2.12-0.0.1-sources.jar

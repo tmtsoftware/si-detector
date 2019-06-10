@@ -1,1 +1,21 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/sidetector-assembly_2.12-0.0.1.jar[0m
+[info] Packaging /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/sidetector-assembly_2.12-0.0.1.jar ...
+[debug] Input file mappings:
+[debug] 	org/tmt/aps
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps
+[debug] 	org/tmt/aps/ics/sidetectorassembly/JSidetectorAssemblyHandlers.class
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps/ics/sidetectorassembly/JSidetectorAssemblyHandlers.class
+[debug] 	org
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org
+[debug] 	org/tmt/aps/ics
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps/ics
+[debug] 	org/tmt/aps/ics/sidetectorassembly/SidetectorAssemblyHandlers.class
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps/ics/sidetectorassembly/SidetectorAssemblyHandlers.class
+[debug] 	org/tmt
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt
+[debug] 	org/tmt/aps/ics/sidetectorassembly/SidetectorAssemblyBehaviorFactory.class
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps/ics/sidetectorassembly/SidetectorAssemblyBehaviorFactory.class
+[debug] 	org/tmt/aps/ics/sidetectorassembly/JSidetectorAssemblyBehaviorFactory.class
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps/ics/sidetectorassembly/JSidetectorAssemblyBehaviorFactory.class
+[debug] 	org/tmt/aps/ics/sidetectorassembly
+[debug] 	  /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-assembly/target/scala-2.12/classes/org/tmt/aps/ics/sidetectorassembly
+[info] Done packaging.

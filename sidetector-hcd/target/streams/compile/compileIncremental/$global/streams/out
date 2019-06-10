@@ -1,27 +1,28 @@
-[0m[[0m[0mdebug[0m] [0m[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/java/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.java)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(org.tmt.aps.ics.sidetectorhcd.JSidetectorHcdHandlers)[0m
-[0m[[0m[0mdebug[0m] [0m[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(org.tmt.aps.ics.sidetectorhcd.JSidetectorHcdHandlers)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/java/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.java)[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/target/scala-2.12/classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 4.027570368 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.310654691 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 4.348799262 s[0m
-[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set()
+[debug] 	added: Set()
+[debug] 	modified: Set()
+[debug] Invalidated products: Set(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/target/scala-2.12/classes/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.class)
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set()
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/java/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.java)
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated classes: Set()
+[debug] All initially invalidated sources:Set(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/src/main/java/org/tmt/aps/ics/sidetectorhcd/JSidetectorHcdHandlers.java)
+[info] Compiling 1 Java source to /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-hcd/target/scala-2.12/classes ...
+[debug] Attempting to call com.sun.tools.javac.api.JavacTool@6d0167f2 directly...
+[debug] Java compilation took 2.879561931 s
+[debug] Java analysis took 0.266743547 s
+[debug] Java compilation + analysis took 3.159227756 s
+[info] Done compiling.
+[debug] New invalidations:
+[debug] 	Set()
+[debug] Initial set of included nodes: Set()
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] 	Set()
+[debug] All newly invalidated classes after taking into account (previously) recompiled classes:Set()
