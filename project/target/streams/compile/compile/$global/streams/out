@@ -1,4 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/smichaels/Desktop/DetectorPrototype/sidetector/project/Common.scala:3:13: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport sbt.{Resolver, url, _}[0m
-[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

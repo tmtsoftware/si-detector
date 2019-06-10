@@ -1,7 +1,0 @@
-[debug] Copy resource mappings: 
-[debug] 	(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/resources/SidetectorHcdStandalone.conf,/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/target/scala-2.12/classes/SidetectorHcdStandalone.conf)
-[debug] 	(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/resources/JSidetectorContainer.conf,/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/target/scala-2.12/classes/JSidetectorContainer.conf)
-[debug] 	(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/resources/SidetectorContainer.conf,/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/target/scala-2.12/classes/SidetectorContainer.conf)
-[debug] 	(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/resources/JSidetectorHcdStandalone.conf,/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/target/scala-2.12/classes/JSidetectorHcdStandalone.conf)
-[debug] 	(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/resources/SidetectorHostConfig.conf,/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/target/scala-2.12/classes/SidetectorHostConfig.conf)
-[debug] 	(/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/resources/application.conf,/home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/target/scala-2.12/classes/application.conf)

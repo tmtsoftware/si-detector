@@ -1,4 +1,0 @@
-[warn] /home/smichaels/Desktop/DetectorPrototype/sidetector/sidetector-deploy/src/main/scala/org/tmt/aps/ics/sidetectordeploy/SidetectorClientApp.scala:38:15: private val hcdCommand in object StageClientApp is never used
-[warn]   private val hcdCommand = hcdCommandService("JSidetectorHCD")
-[warn]               ^
-[warn] one warning found
