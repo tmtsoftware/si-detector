@@ -12,7 +12,7 @@ import csw.params.commands.ControlCommand;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-import org.tmt.aps.ics.sidetector.api.*;
+//import org.tmt.aps.ics.sidetector.api.*;
 
 /**
  * Domain specific logic should be written in below handlers.
@@ -27,8 +27,8 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
     private final JCswContext cswCtx;
     private final ILogger log;
 
-    private Map<String, List<ParameterItemInfo>> allParameters;
-    private List<StatusItemInfo> allStatuses;
+    //private Map<String, List<ParameterItemInfo>> allParameters;
+    //private List<StatusItemInfo> allStatuses;
 
     JSidetectorHcdHandlers(ActorContext<TopLevelActorMessage> ctx,JCswContext cswCtx) {
         super(ctx, cswCtx);
@@ -43,14 +43,14 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
 
             try {
                 log.info("loading SI Dll");
-                SpectralInstrumentsApi.loadDll();
+                //SpectralInstrumentsApi.loadDll();
 
-                int camHandle = SpectralInstrumentsApi.openCamera("SISIM", "SimCamera");
-                allParameters = SpectralInstrumentsApi.getAllParameters(camHandle);
-                allStatuses = SpectralInstrumentsApi.getAllStatuses(camHandle);
-                String commands = SpectralInstrumentsApi.getXmlFile(camHandle, "command.xml");
+                //int camHandle = SpectralInstrumentsApi.openCamera("SISIM", "SimCamera");
+                //allParameters = SpectralInstrumentsApi.getAllParameters(camHandle);
+                //allStatuses = SpectralInstrumentsApi.getAllStatuses(camHandle);
+                //String commands = SpectralInstrumentsApi.getXmlFile(camHandle, "command.xml");
 
-                log.info("commands = " + commands);
+                //log.info("commands = " + commands);
 
             } catch (Exception e) {
                 e.printStackTrace();
