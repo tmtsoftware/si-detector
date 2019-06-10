@@ -35,7 +35,7 @@ object StageClientApp extends App {
   private def createCommandService: AkkaLocation ⇒ CommandService = CommandServiceFactory.make
 
   println("ABOUT TO GET HCD COMMAND")
-  private val hcdCommand = hcdCommandService("JSidetectorHCD")
+  private val hcdCommand = hcdCommandService("JSidetectorHcd")
 
   println("DONE")
 
