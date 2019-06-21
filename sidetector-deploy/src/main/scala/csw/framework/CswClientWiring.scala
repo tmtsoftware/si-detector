@@ -17,8 +17,7 @@ class CswClientWiring {
   import actorRuntime._
 
   lazy val timeout: FiniteDuration                         = 20.seconds
-  implicit lazy val typedSystem: ActorSystem[Nothing]      = system.toTyped
-  implicit lazy val cswFrameworkSystem: CswFrameworkSystem = new CswFrameworkSystem(system)
+  implicit lazy val cswFrameworkSystem: CswFrameworkSystem = new CswFrameworkSystem(typedSystem)
 
   lazy val cswContext: CswContext =
     CswContext
