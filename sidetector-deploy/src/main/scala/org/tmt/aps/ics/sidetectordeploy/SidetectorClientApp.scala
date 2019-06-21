@@ -6,7 +6,6 @@ import csw.command.api.scaladsl.CommandService
 import csw.command.client.CommandServiceFactory
 import csw.framework.CswClientWiring
 import csw.framework.commons.CoordinatedShutdownReasons.ApplicationFinishedReason
-import csw.framework.models.CswContext
 import csw.location.api.models.ComponentType.{Assembly, HCD}
 import csw.location.api.models.Connection.AkkaConnection
 import csw.location.api.models.{AkkaLocation, ComponentId, ComponentType}
@@ -18,8 +17,8 @@ object StageClientApp extends App {
 
   lazy val clientWiring = new CswClientWiring
   import clientWiring._
-  lazy val cswContext: CswContext = clientWiring.cswContext
-  import cswContext._
+  import wiring._
+  import actorRuntime._
 
   def assemblyCommandService(assemblyName: String): CommandService = createCommandService(getAkkaLocation(assemblyName, Assembly))
 
