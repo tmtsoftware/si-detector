@@ -9,10 +9,19 @@ import csw.logging.api.javadsl.ILogger;
 import csw.params.commands.CommandResponse;
 import csw.params.commands.ControlCommand;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-//import org.tmt.aps.ics.sidetector.api.*;
+
+import csw.params.commands.Result;
+import csw.params.core.generics.Key;
+import csw.params.core.generics.Parameter;
+import csw.params.core.models.Id;
+import csw.params.core.models.ObsId;
+import csw.params.core.models.Struct;
+import csw.params.javadsl.JKeyType;
+import org.tmt.aps.ics.sidetector.api.*;
 
 /**
  * Domain specific logic should be written in below handlers.
@@ -27,8 +36,8 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
     private final JCswContext cswCtx;
     private final ILogger log;
 
-    //private Map<String, List<ParameterItemInfo>> allParameters;
-    //private List<StatusItemInfo> allStatuses;
+    private Map<String, List<ParameterItemInfo>> allParameters;
+    private List<StatusItemInfo> allStatuses;
 
     JSidetectorHcdHandlers(ActorContext<TopLevelActorMessage> ctx,JCswContext cswCtx) {
         super(ctx, cswCtx);
@@ -43,14 +52,14 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
 
             try {
                 log.info("loading SI Dll");
-                //SpectralInstrumentsApi.loadDll();
+                SpectralInstrumentsApi.loadDll();
 
-                //int camHandle = SpectralInstrumentsApi.openCamera("SISIM", "SimCamera");
-                //allParameters = SpectralInstrumentsApi.getAllParameters(camHandle);
-                //allStatuses = SpectralInstrumentsApi.getAllStatuses(camHandle);
-                //String commands = SpectralInstrumentsApi.getXmlFile(camHandle, "command.xml");
+                int camHandle = SpectralInstrumentsApi.openCamera("SISIM", "SimCamera");
+                allParameters = SpectralInstrumentsApi.getAllParameters(camHandle);
+                allStatuses = SpectralInstrumentsApi.getAllStatuses(camHandle);
+                String commands = SpectralInstrumentsApi.getXmlFile(camHandle, "command.xml");
 
-                //log.info("commands = " + commands);
+                log.info("commands = " + commands);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -78,7 +87,69 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
 
     @Override
     public CommandResponse.SubmitResponse onSubmit(ControlCommand controlCommand) {
-        return new CommandResponse.Completed(controlCommand.runId());
+
+
+        //prefix
+        String prefix = "aps.sidetector";
+
+        switch (controlCommand.commandName().name()) {
+
+            case "getStatusMetaData":
+
+                log.debug("handling point command: " + controlCommand);
+
+                Key<String> k1 = JKeyType.StringKey().make("metaData");
+
+
+                log.info("starting conversion");
+                Parameter<Struct> statusParam = StatusConverter.convertStatusItemListToStatusParam(allStatuses);
+                log.info("ending conversion");
+
+                //Create Result using madd
+                Result r1 = new Result(prefix).add(statusParam);
+
+
+                return new CommandResponse.CompletedWithResult(controlCommand.runId(), r1);
+
+
+            case "getParameterMetaData":
+                log.debug("handling pointDemand command: " + controlCommand);
+
+                log.debug("handling point command: " + controlCommand);
+
+                Key<String> k2 = JKeyType.StringKey().make("metaData");
+                Key<String> listNameKey = JKeyType.StringKey().make("listNameKey");
+
+
+                log.info("starting conversion");
+
+
+                Result r2 = new Result(prefix);
+
+                List<Parameter<Struct>> parameterList = new ArrayList<Parameter<Struct>>();
+                for (String paramListName : allParameters.keySet()) {
+
+                    List<ParameterItemInfo> parameterInfoList = allParameters.get(paramListName);
+
+                    Parameter<Struct> paramParameter = ParameterConverter.convertParameterItemListToParameterParam(paramListName, parameterInfoList);
+
+                    parameterList.add(paramParameter);
+                    r2 = r2.add(paramParameter);
+
+                }
+
+
+                return new CommandResponse.CompletedWithResult(controlCommand.runId(), r2);
+
+
+
+            default:
+                log.error("unhandled message in Monitor Actor onMessage: " + controlCommand);
+                // maintain actor state
+
+                return new CommandResponse.Error(controlCommand.runId(), "command not recognized");
+
+        }
     }
 
     @Override

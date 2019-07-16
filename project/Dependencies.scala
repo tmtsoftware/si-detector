@@ -12,6 +12,7 @@ object Dependencies {
 
   val SidetectorHcd = Seq(
     CSW.`csw-framework`,
+    Libs.`si-api`,
     CSW.`csw-testkit` % Test,
     Libs.`scalatest` % Test,
     Libs.`junit` % Test,
