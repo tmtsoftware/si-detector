@@ -10,6 +10,7 @@ object Dependencies {
     Libs.`junit-interface` % Test
   )
 
+  
   val SidetectorHcd = Seq(
     CSW.`csw-framework`,
     Libs.`si-api`,

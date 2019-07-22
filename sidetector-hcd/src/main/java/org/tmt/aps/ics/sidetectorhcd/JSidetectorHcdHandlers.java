@@ -38,6 +38,7 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
 
     private Map<String, List<ParameterItemInfo>> allParameters;
     private List<StatusItemInfo> allStatuses;
+    List<ParameterItemInfo> allCommands;
 
     JSidetectorHcdHandlers(ActorContext<TopLevelActorMessage> ctx,JCswContext cswCtx) {
         super(ctx, cswCtx);
@@ -57,9 +58,10 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
                 int camHandle = SpectralInstrumentsApi.openCamera("SISIM", "SimCamera");
                 allParameters = SpectralInstrumentsApi.getAllParameters(camHandle);
                 allStatuses = SpectralInstrumentsApi.getAllStatuses(camHandle);
-                String commands = SpectralInstrumentsApi.getXmlFile(camHandle, "command.xml");
 
-                log.info("commands = " + commands);
+                allCommands = SpectralInstrumentsApi.getAllCommands(camHandle);
+
+                log.info(""+allCommands);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -88,7 +90,7 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
     @Override
     public CommandResponse.SubmitResponse onSubmit(ControlCommand controlCommand) {
 
-
+        log.info(controlCommand.commandName().name());
         //prefix
         String prefix = "aps.sidetector";
 
@@ -140,6 +142,24 @@ public class JSidetectorHcdHandlers extends JComponentHandlers {
 
 
                 return new CommandResponse.CompletedWithResult(controlCommand.runId(), r2);
+
+
+            case "getCommandMetaData":
+
+                log.debug("handling command metadata command: " + controlCommand);
+
+                Key<String> k3 = JKeyType.StringKey().make("metaData");
+
+
+                log.info("starting conversion");
+                Parameter<Struct> commandParam = ParameterConverter.convertParameterItemListToParameterParam(allCommands);
+                log.info("ending conversion");
+
+                //Create Result using madd
+                Result r3 = new Result(prefix).add(commandParam);
+
+
+                return new CommandResponse.CompletedWithResult(controlCommand.runId(), r3);
 
 
 
