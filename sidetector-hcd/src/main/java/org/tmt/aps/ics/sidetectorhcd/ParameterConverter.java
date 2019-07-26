@@ -17,6 +17,7 @@ public class ParameterConverter {
 
 
     static Key<String> displayNameKey = JKeyType.StringKey().make("displayName");
+    static Key<String> postNameKey = JKeyType.StringKey().make("postName");
     static Key<String> valStrKey = JKeyType.StringKey().make("valStr");
     static Key<String> unitStrKey = JKeyType.StringKey().make("unitStr");
     static Key<Integer> unitTypeKey = JKeyType.IntKey().make("unitType");
@@ -120,6 +121,7 @@ public class ParameterConverter {
 
             Struct parameterItemStruct = new Struct().madd(
                     displayNameKey.set(parameterItemInfo.getDisplayName()),
+                    postNameKey.set(parameterItemInfo.getPostName()),
                     valStrKey.set(parameterItemInfo.getValStr()),
                     unitStrKey.set((parameterItemInfo.getUnitStr())),
                     unitTypeKey.set(parameterItemInfo.getUnitType()),
